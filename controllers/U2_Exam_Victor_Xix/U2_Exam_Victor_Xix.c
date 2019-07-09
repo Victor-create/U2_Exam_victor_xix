@@ -110,12 +110,12 @@ int main(int argc, char **argv)
     //if (key==WB_KEYBOARD_UP){
     //double speed = -1;
     wb_motor_set_position(wheel_1, INFINITY);
-    wb_motor_set_velocity(wheel_1, 1);
+    wb_motor_set_velocity(wheel_1, -1);
     wb_motor_set_position(wheel_2, INFINITY);
-    wb_motor_set_velocity(wheel_2, 0);
+    wb_motor_set_velocity(wheel_2, 1);
     wb_motor_set_position(wheel_3, INFINITY);
-    wb_motor_set_velocity(wheel_3, 1);
-    }
+    wb_motor_set_velocity(wheel_3, 0);
+    
      /*
     if(key==WB_KEYBOARD_DOWN){
     //double speed = -1;
