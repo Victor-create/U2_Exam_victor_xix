@@ -14,7 +14,7 @@
 #include <webots/robot.h>
 #include <webots/distance_sensor.h>
 #include <webots/position_sensor.h>
-#include <webots/keyboard.h>
+//#include <webots/keyboard.h>
 #include <webots/motor.h>
 
 /*
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 {
   /* necessary to initialize webots stuff */
   wb_robot_init();
-  wb_keyboard_enable(TIME_STEP);
+  //wb_keyboard_enable(TIME_STEP);
  
   
   /*
@@ -75,19 +75,19 @@ int main(int argc, char **argv)
   double a1, a2,a3;//posiciones actuales
   double RPM_1, RPM_2, RPM_3;
   
-  ////rueda izquierda//////////////
+  ////rueda 1//////////////
   a1 = wb_position_sensor_get_value(ps_1);
           pos_final1 = ((a1 - b1)*1)/0.064;  //0-064 es el time step en segundos
           RPM_1= (pos_final1*60)/(2*PI);
           b1 = a1;
           
-  //////rueda derecha////////////
+  //////rueda 2////////////
   a2 = wb_position_sensor_get_value(ps_2);
           pos_final2 = ((a2 - b2)*1)/0.064;
           RPM_2= (pos_final2*60)/(2*PI);
           b2 = a2;
           
-  //////rueda derecha////////////
+  //////rueda 3////////////
   a3 = wb_position_sensor_get_value(ps_3);
           pos_final3 = ((a3 - b3)*1)/0.064;
           RPM_3= (pos_final3*60)/(2*PI);
@@ -103,19 +103,20 @@ int main(int argc, char **argv)
   linvel2=pos_final2*radio;
   linvel3=pos_final3*radio;
   linvel_rob=(linvel1+linvel2+linvel3)/3;
+  
    
-  int key=wb_keyboard_get_key();
+  //int key=wb_keyboard_get_key();
     
-    if (key==WB_KEYBOARD_UP){
+    //if (key==WB_KEYBOARD_UP){
     //double speed = -1;
     wb_motor_set_position(wheel_1, INFINITY);
     wb_motor_set_velocity(wheel_1, 1);
     wb_motor_set_position(wheel_2, INFINITY);
-    wb_motor_set_velocity(wheel_2, 1);
+    wb_motor_set_velocity(wheel_2, 0);
     wb_motor_set_position(wheel_3, INFINITY);
     wb_motor_set_velocity(wheel_3, 1);
     }
-    
+     /*
     if(key==WB_KEYBOARD_DOWN){
     //double speed = -1;
     wb_motor_set_position(wheel_1, INFINITY);
@@ -152,14 +153,13 @@ int main(int argc, char **argv)
     wb_motor_set_position(wheel_3, INFINITY);
     wb_motor_set_velocity(wheel_3, 0);
     }
+    */
     
      //printf("Left velocity: %f RPM\n",pos_final);
      //printf("SLW_RPM= %f RPM\LW_RPM= %f RPM\tRW_RPM= %f RPM\t\tlinear velocity= %f\n",RPM_1,RPM_2,RPM_3,vel_rob);
-     printf("Wheel1:RW_RPM %f RPM\n",RPM_1);
-     //printf("Wheel2:RW_RPM %f RPM\n",RPM_2);
-     //printf("Wheel3:RW_RPM %f RPM\n",RPM_3);
+     printf("Wheel1:RW_RPM %f RPM\tWheel2:RW_RPM %f RPM\tWheel3:RW_RPM %f RPM\tlinear_velocity %f \n",RPM_1,RPM_2,RPM_3,linvel_rob);
      //printf("Linear:RW_RPM %f RPM\n",);
-     fflush(stdout);
+     //fflush(stdout);
     
 
     /*

@@ -4,5 +4,4 @@ build/release/U2_Exam_Victor_Xix.o: U2_Exam_Victor_Xix.c \
  /usr/local/webots/include/controller/c/webots/nodes.h \
  /usr/local/webots/include/controller/c/webots/distance_sensor.h \
  /usr/local/webots/include/controller/c/webots/position_sensor.h \
- /usr/local/webots/include/controller/c/webots/keyboard.h \
  /usr/local/webots/include/controller/c/webots/motor.h
