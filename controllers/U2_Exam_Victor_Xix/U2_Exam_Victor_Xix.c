@@ -10,14 +10,15 @@
  * You may need to add include files like <webots/distance_sensor.h> or
  * <webots/differential_wheels.h>, etc.
  */
-#include <stdio.h>
+
 #include <webots/robot.h>
 #include <webots/distance_sensor.h>
 #include <webots/position_sensor.h>
-//#include <webots/keyboard.h>
 #include <webots/motor.h>
 
+#include <stdio.h>
 /*
+
  * You may want to add macros here.
  */
 #define TIME_STEP 64
@@ -26,8 +27,8 @@
 double b1=0;  //posicion inicial en 0
 double b2=0; // Posicion incial en 0
 double b3=0;
-int veces=0;
-int veces2=0;
+int times=0;
+int times2=0;
 //double pos_final;
 //double ObsSen_Pos;
 
@@ -75,10 +76,10 @@ int main(int argc, char **argv)
    */
   while (wb_robot_step(TIME_STEP) != -1) {
   
-  double pos_final1, pos_final2,pos_final3;
+  double pos_final1, pos_final2,pos_final3; //posiciones finales
   double a1, a2,a3;//posiciones actuales
   double RPM_1, RPM_2, RPM_3;
-  double d1,d2;
+  double d1,d2;// Variables para el sensor de distancia
   
   d1=(wb_distance_sensor_get_value(ds_r1)*0.2)/65535;
   d2=(wb_distance_sensor_get_value(ds_r2)*0.2)/65535;
@@ -123,36 +124,36 @@ int main(int argc, char **argv)
     wb_motor_set_velocity(wheel_3, 0);
 
     if (d1<= 0.17 && d1<d2){
-      veces++;
+      times++;
     }
-    if (veces>=1 && veces<=58){
+    if (times>=1 && times<=58){
     wb_motor_set_position(wheel_1, INFINITY);
     wb_motor_set_velocity(wheel_1, 1);
     wb_motor_set_position(wheel_2, INFINITY);
     wb_motor_set_velocity(wheel_2, 1);
     wb_motor_set_position(wheel_3, INFINITY);
     wb_motor_set_velocity(wheel_3, 1);
-    veces++;
+    times++;
     }
     else {
-     veces=0;
+     times=0;
     }
     
     if (d2<0.17 && d2<d1){
-      veces2++;
+      times2++;
     }
     
-    if(veces2 >=1 && veces2<=58){
+    if(times2 >=1 && times2<=58){
     wb_motor_set_position(wheel_1, INFINITY);
     wb_motor_set_velocity(wheel_1, -1);
     wb_motor_set_position(wheel_2, INFINITY);
     wb_motor_set_velocity(wheel_2, -1);
     wb_motor_set_position(wheel_3, INFINITY);
     wb_motor_set_velocity(wheel_3, -1);
-    veces2++;
+    times2++;
     }
     else{
-    veces2=0;
+    times2=0;
     }
      /*
     if(key==WB_KEYBOARD_DOWN){
