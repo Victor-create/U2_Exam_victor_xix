@@ -10,4 +10,4 @@ selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
 textFiles: 0 "controllers/U2_Exam_Victor_Xix/U2_Exam_Victor_Xix.c"
-globalOptionalRendering: RadarFrustums::Skeleton::PenPaintingRays::CameraFrustums::DistanceSensorRays
+globalOptionalRendering: RadarFrustums::Skeleton::PenPaintingRays::CameraFrustums::LightSensorRays::LightPositions::DistanceSensorRays

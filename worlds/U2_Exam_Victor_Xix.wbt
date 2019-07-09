@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.07747965888016187 0.9322224889746669 0.35349417747636325 2.651250542487696
-  position 0.5370698809476537 0.7424036593062422 -0.5234901600593725
+  orientation 0.14009441661142488 -0.9454226469223282 -0.2941930881592619 4.09415641082722
+  position 0.8088228707250681 0.8448701608485496 -0.49839666784958037
 }
 TexturedBackground {
 }
@@ -12,14 +12,14 @@ TexturedBackgroundLight {
 Floor {
 }
 DEF OMNI_WHEELS Robot {
-  translation 0.21220510876138213 0.05892710005069129 -0.003693338313355164
-  rotation 0.004468550850766797 0.9999900077905121 -0.00012795478055037862 -2.0319958104258706
+  translation 0.2120658759860563 0.058577237796244845 -0.003606205714534046
+  rotation 0.0028099568881768443 0.9999960517601033 -2.4627047272471087e-05 -2.031977718791124
   children [
     DEF SOLID1 Solid {
       children [
         DEF WHEEL1 HingeJoint {
           jointParameters HingeJointParameters {
-            position 16.417517435310184
+            position 16.417520778494396
             axis 0 0 1
             anchor 0 0 0.1
           }
@@ -36,16 +36,16 @@ DEF OMNI_WHEELS Robot {
           ]
           endPoint Solid {
             translation 0 0 0.1
-            rotation 0 0 1 3.8511468209510116
+            rotation 0 0 1 3.851150164135223
             children [
               DEF sr1 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -846.1031699618643
+                  position -949.7730152325737
                   anchor 0 0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 0.05 0.02
-                  rotation -1 0 0 4.156338799799708
+                  rotation 1 0 0 5.2711514587234465
                   children [
                     DEF r1 Transform {
                       rotation 0 0 1 1.5708
@@ -70,19 +70,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.030264404500938855 0.046479466124163274 -0.038311045435824
-                  angularVelocity -2.286912468702486 2.275967586821056 2.3109773488741165
                 }
               }
               DEF sr2 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -3536.2028013779595
+                  position -3644.2492074691313
                   axis 0.707107 0.707107 0
                   anchor -0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 0.03535 0.02
-                  rotation -0.7071067811865475 -0.7071067811865475 0 5.052658743031931
+                  rotation -0.7071067811865476 -0.7071067811865476 0 0.001729304971045463
                   children [
                     DEF r2 Transform {
                       rotation 0 0 1 2.27
@@ -97,18 +95,16 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.018321326529923056 0.06441774205519155 -0.07085524808056885
-                  angularVelocity -1.08383795941807 3.9858441635624535 -0.15952348939644637
                 }
               }
               DEF sr3 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 2899.1810848413525
+                  position 2999.198883673491
                   anchor 0 -0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 -0.05 0.02
-                  rotation -1 0 0 3.6505270756164943
+                  rotation -0.9999999999999999 0 0 4.163693158351482
                   children [
                     DEF r3 Transform {
                       rotation 0 0 1 1.5708
@@ -123,19 +119,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.028012888574984803 -0.018761111220823495 -0.0964149248231752
-                  angularVelocity 0.2491973242804531 -2.526232292395891 -2.8733874180517924
                 }
               }
               DEF sr4 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 2882.4423198222285
+                  position 2988.627268231559
                   axis 0.707107 0.707107 0
                   anchor 0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 -0.03535 0.02
-                  rotation 0.7071067811865475 0.7071067811865475 0 4.743449133977849
+                  rotation -0.7071067811865476 -0.7071067811865476 0 2.1689379859242623
                   children [
                     DEF r4 Transform {
                       rotation 0 0 1 2.27
@@ -150,19 +144,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.016069736364965982 -0.03668659378033247 -0.0638706452289421
-                  angularVelocity -0.760936960648363 -3.906617851602855 -0.8095647410050998
                 }
               }
               DEF sr5 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -2771.4448549810527
+                  position -2873.353429835863
                   axis 0 1 0
                   anchor -0.05 0 0.02
                 }
                 endPoint Solid {
                   translation -0.05 0 0.02
-                  rotation 0 1 0 5.723050792324537
+                  rotation 0 1 0 4.345440852387453
                   children [
                     DEF r5 Transform {
                       children [
@@ -176,19 +168,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.0036910605299920714 0.052741275412147084 -0.10135453108860525
-                  angularVelocity 0.2099213226560073 2.715999808367665 -2.803908998925249
                 }
               }
               DEF sr6 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 2868.9346760881276
+                  position 2970.756389661638
                   axis 0 1 0
                   anchor 0.05 0 0.02
                 }
                 endPoint Solid {
                   translation 0.05 0 0.02
-                  rotation 0 1 0 3.8021760142361836
+                  rotation 0 0.9999999999999999 0 5.092924672873151
                   children [
                     DEF r6 Transform {
                       children [
@@ -202,19 +192,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.005942652656099468 -0.025010088178411775 -0.03337136262887529
-                  angularVelocity -1.8947607610609152 -3.0554606274392584 1.5155097599861702
                 }
               }
               DEF sr7 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -6612.873213265266
+                  position -6713.770383992831
                   axis -0.707107 0.707107 0
                   anchor -0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 -0.03535 0.02
-                  rotation 0.7071067811865476 -0.7071067811865476 0 2.96227011234083
+                  rotation 0.7071067811865476 -0.7071067811865476 0 3.3284759250324725
                   children [
                     DEF r7 Transform {
                       rotation 0 0 1 0.76
@@ -229,19 +217,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.02288077158683706 0.018283620440196872 -0.11193474533044408
-                  angularVelocity 0.7052980978492714 -0.006246388813727549 -3.813179044076858
                 }
               }
               DEF sr8 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 1473.3492839720016
+                  position 1473.3500466527255
                   axis -0.707107 0.707107 0
                   anchor 0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 0.03535 0.02
-                  rotation -0.7071067811865476 0.7071067811865476 0 3.0839220919783226
+                  rotation -0.7071067811865475 0.7071067811865475 0 3.08468477270226
                   children [
                     DEF r8 Transform {
                       rotation 0 0 1 0.76
@@ -256,8 +242,6 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.025132832567065586 0.009470100488136863 -0.022789053783656497
-                  angularVelocity -2.1888366730691446 -0.5995672181435345 2.1159884920212924
                 }
               }
               DEF WHEEL_TRANS Transform {
@@ -300,8 +284,6 @@ DEF OMNI_WHEELS Robot {
             }
             physics Physics {
             }
-            linearVelocity -0.0011256536595797284 0.01386618051975888 -0.06736275784873
-            angularVelocity -0.8794724678428416 -0.33191577788662924 -0.507408523082985
           }
         }
       ]
@@ -317,7 +299,7 @@ DEF OMNI_WHEELS Robot {
       children [
         DEF WHEEL2 HingeJoint {
           jointParameters HingeJointParameters {
-            position 33.74353355411157
+            position 33.74351158629518
             axis 0 0 1
             anchor 0 0 0.1
           }
@@ -334,16 +316,16 @@ DEF OMNI_WHEELS Robot {
           ]
           endPoint Solid {
             translation 0 0 0.1
-            rotation 0 0 -1 3.9531724789659877
+            rotation 0 0 -0.9999999999999999 3.9531944467825664
             children [
               DEF sr1 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 241.85712803878485
+                  position 329.3188913729423
                   anchor 0 0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 0.05 0.02
-                  rotation 1 0 0 3.096086365960564
+                  rotation 1 0 0 2.5932553996037924
                   children [
                     USE r1
                   ]
@@ -353,19 +335,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.027920678017759187 -0.031762990322942226 -0.043940558866881106
-                  angularVelocity -2.2480395000083635 2.2581692538248626 1.0956861434927891
                 }
               }
               DEF sr2 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -524.5097353053644
+                  position -524.5076781619869
                   axis 0.707107 0.707107 0
                   anchor -0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 0.03535 0.02
-                  rotation 0.7071067811865476 0.7071067811865476 0 3.2778304977208483
+                  rotation 0.7071067811865475 0.7071067811865475 0 3.279887641098404
                   children [
                     USE r2
                   ]
@@ -375,18 +355,16 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.01199594483089085 0.0006778126949853478 -0.03390220170941021
-                  angularVelocity -3.470860307816749 -0.15246463834234858 1.1868758684456746
                 }
               }
               DEF sr3 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -1478.5903291707464
+                  position -1567.6305286197337
                   anchor 0 -0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 -0.05 0.02
-                  rotation 1 0 0 4.241403323636036
+                  rotation 1 0 0 3.165798175162924
                   children [
                     USE r3
                   ]
@@ -396,19 +374,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.08909090082126395 0.03754418178947441 -0.014076610152208447
-                  angularVelocity 2.1007830555449796 -2.572826789493209 0.827672635525976
                 }
               }
               DEF sr4 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -1720.02254070833
+                  position -1799.814476369829
                   axis 0.707107 0.707107 0
                   anchor 0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 -0.03535 0.02
-                  rotation 0.7071067811865475 0.7071067811865475 0 1.5702334588765967
+                  rotation -0.7071067811865475 -0.7071067811865475 0 2.8234785164672482
                   children [
                     USE r4
                   ]
@@ -418,19 +394,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.10501135960978579 0.005115411708413507 -0.024114131161712824
-                  angularVelocity 2.9891789462982237 -0.48266926762686446 0.7618349588755404
                 }
               }
               DEF sr5 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -378.06503791367925
+                  position -295.1437920635754
                   axis 0 1 0
                   anchor -0.05 0 0.02
                 }
                 endPoint Solid {
                   translation -0.05 0 0.02
-                  rotation 0 -1 0 1.0739194829040593
+                  rotation 0 -0.9999999999999999 0 6.117267933314425
                   children [
                     USE r5
                   ]
@@ -440,19 +414,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.023312708406197438 0.03438817747128352 -0.020999301720713487
-                  angularVelocity -2.0240751568929336 -2.241408713768902 1.0912084389302235
                 }
               }
               DEF sr6 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -1416.2251138531046
+                  position -1506.3922642689502
                   axis 0 1 0
                   anchor 0.05 0 0.02
                 }
                 endPoint Solid {
                   translation 0.05 0 0.02
-                  rotation 0 0.9999999999999999 0 3.774765569481913
+                  rotation 0 0.9999999999999999 0 1.572209454150597
                   children [
                     USE r6
                   ]
@@ -462,19 +434,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.093699419446484 -0.028616150301769575 -0.03701771113232809
-                  angularVelocity 2.7045980268986987 2.02964262667822 0.7763063487089094
                 }
               }
               DEF sr7 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 2045.4111646054398
+                  position 2136.7217442626875
                   axis -0.707107 0.707107 0
                   anchor -0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 -0.03535 0.02
-                  rotation 0.7071067811865476 -0.7071067811865476 0 2.9072455351053836
+                  rotation -0.7071067811865476 0.7071067811865476 0 0.4387398216280778
                   children [
                     USE r7
                   ]
@@ -484,19 +454,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.0552475670980095 0.04966591601981032 -0.012789225118615867
-                  angularVelocity -0.06994680663340683 -3.360247660684796 0.9707771091328351
                 }
               }
               DEF sr8 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -5130.625325494162
+                  position -5216.49243117157
                   axis -0.707107 0.707107 0
                   anchor 0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 0.03535 0.02
-                  rotation 0.7071067811865476 -0.7071067811865476 0 3.546114835619533
+                  rotation 0.7071067811865476 -0.7071067811865476 0 1.448626212513612
                   children [
                     USE r8
                   ]
@@ -506,8 +474,6 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.06176401208747547 -0.043884759088750426 -0.04522794290228137
-                  angularVelocity 0.2659588424672069 3.164312848813169 0.9296243567681166
                 }
               }
               USE WHEEL_TRANS
@@ -533,8 +499,6 @@ DEF OMNI_WHEELS Robot {
             }
             physics Physics {
             }
-            linearVelocity -0.05850562456429049 0.002890454179248433 -0.02900840999453673
-            angularVelocity 0.08180089702472418 -0.3284436045763938 0.9307814783398509
           }
         }
       ]
@@ -548,7 +512,7 @@ DEF OMNI_WHEELS Robot {
       children [
         DEF WHEEL3 HingeJoint {
           jointParameters HingeJointParameters {
-            position -7.545941377418864
+            position -7.545909814211655
             axis 0 0 1
             anchor 0 0 0.1
           }
@@ -565,16 +529,16 @@ DEF OMNI_WHEELS Robot {
           ]
           endPoint Solid {
             translation 0 0 0.1
-            rotation 0 0 1 5.024338676940216
+            rotation 0 0 1 5.0243702401471975
             children [
               DEF sr1 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -931.4867850092298
+                  position -931.4856338329479
                   anchor 0 0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 0.05 0.02
-                  rotation -1 0 0 1.5753595466510353
+                  rotation -1 0 0 1.5742083703690846
                   children [
                     USE r1
                   ]
@@ -584,19 +548,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.017462771246152427 0.0026687027592424786 -0.006616117717095473
-                  angularVelocity 0.07547866777647813 -0.0182110636422853 0.01576434738821514
                 }
               }
               DEF sr2 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -1949.8966924814126
+                  position -1949.8941748804111
                   axis 0.707107 0.707107 0
                   anchor -0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 0.03535 0.02
-                  rotation -0.7071067811865475 -0.7071067811865475 0 2.109247255740821
+                  rotation -0.7071067811865475 -0.7071067811865475 0 2.1067296547393206
                   children [
                     USE r2
                   ]
@@ -606,18 +568,16 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.012588133259957127 0.0013588011927610933 -0.0015032157393208003
-                  angularVelocity 0.11387300985363695 -0.2437450752706206 0.07639561363370531
                 }
               }
               DEF sr3 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 179.76582924866662
+                  position 179.76698042627584
                   anchor 0 -0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 -0.05 0.02
-                  rotation 1 0 0 3.8366406476381987
+                  rotation 0.9999999999999999 0 0 3.837791825247415
                   children [
                     USE r3
                   ]
@@ -627,19 +587,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.011078111309046752 -0.002326698746151446 0.01018701486944907
-                  angularVelocity 0.07547866106285961 -0.018211100635648077 0.015764337606236203
                 }
               }
               DEF sr4 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -8.26401138133116
+                  position -10.620909281391585
                   axis 0.707107 0.707107 0
                   anchor 0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 -0.03535 0.02
-                  rotation 0.7071067811865476 0.7071067811865476 0 4.302359233028012
+                  rotation 0.7071067811865475 0.7071067811865475 0 1.945461332967588
                   children [
                     USE r4
                   ]
@@ -649,19 +607,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.0062034731941702885 -0.0010167973291424542 0.005074112953564542
-                  angularVelocity 0.37600834104464237 1.1123519947021238e-05 0.4715068128430803
                 }
               }
               DEF sr5 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -2273.146926028955
+                  position -2273.1443005334377
                   axis 0 1 0
                   anchor -0.05 0 0.02
                 }
                 endPoint Solid {
                   translation -0.05 0 0.02
-                  rotation 0 1 0 1.3661551700552825
+                  rotation 0 1 0 1.3687806655726324
                   children [
                     USE r5
                   ]
@@ -671,19 +627,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.0022115680281596115 -0.0006466433201029538 0.005535438751347964
-                  angularVelocity -0.01160727864333673 -0.31487685812923405 -0.11336849335604446
                 }
               }
               DEF sr6 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -1983.3703346133339
+                  position -1983.3695733204158
                   axis 0 1 0
                   anchor 0.05 0 0.02
                 }
                 endPoint Solid {
                   translation 0.05 0 0.02
-                  rotation 0 1 0 2.116222455415474
+                  rotation 0 1 0 2.116983748333488
                   children [
                     USE r6
                   ]
@@ -693,19 +647,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.0041754805236622165 0.0009822187455834116 -0.0019607564813266163
-                  angularVelocity -0.07678253079126218 -0.27672136913776796 -0.21363525185004298
                 }
               }
               DEF sr7 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -3444.446015119512
+                  position -3444.4449807828
                   axis -0.707107 0.707107 0
                   anchor -0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 -0.03535 0.02
-                  rotation 0.7071067811865475 -0.7071067811865475 0 1.2604667850987503
+                  rotation 0.7071067811865476 -0.7071067811865476 0 1.259432448386641
                   children [
                     USE r7
                   ]
@@ -715,19 +667,17 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.007590270706567813 -0.0021729476715516708 0.010376598999366472
-                  angularVelocity -0.04943200867422011 -0.08827910898246773 -0.17313331731831644
                 }
               }
               DEF sr8 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -426.1717743931872
+                  position -426.17074594786203
                   axis -0.707107 0.707107 0
                   anchor 0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 0.03535 0.02
-                  rotation -0.7071067811865476 0.7071067811865476 0 1.084826495024674
+                  rotation -0.7071067811865476 0.7071067811865476 0 1.0858549403498496
                   children [
                     USE r8
                   ]
@@ -737,8 +687,6 @@ DEF OMNI_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.013974930643673368 0.0025149516846435516 -0.006805701847012886
-                  angularVelocity -0.049359702941486255 -0.08853546118162316 -0.17302349709495946
                 }
               }
               USE WHEEL_TRANS
@@ -764,8 +712,6 @@ DEF OMNI_WHEELS Robot {
             }
             physics Physics {
             }
-            linearVelocity 0.0031924679583572764 0.00017101694134870457 0.001785609376600055
-            angularVelocity 0.018442901609162586 -0.3324988081246749 -0.06721338588225569
           }
         }
       ]
@@ -838,34 +784,36 @@ DEF OMNI_WHEELS Robot {
             size 0.01 0.01 0.1
           }
         }
-        DistanceSensor {
-          translation 0 0 0.05
-          rotation 1 0 0 5
-          name "distance_sensor"
-          lookupTable [
-            0 0 0
-            0.2 0.1000152 0.04999236991
-          ]
-          aperture 1.57
-          resolution 1
-        }
-        DistanceSensor {
-          translation 0 0 -0.05
-          rotation 1 0 0 5
-          name "distance sensor(1)"
-          lookupTable [
-            0 0 0
-            0.2 0.1000152 0.04999236991
-          ]
-          resolution 1
-        }
       ]
+    }
+    DistanceSensor {
+      translation 0.13 0.04 0.019999999999999997
+      rotation 0 1 0 -0.43633269389957474
+      name "distance_sensor2"
+      lookupTable [
+        0 0 0
+        0.2 65535 0
+      ]
+      resolution 1
+    }
+    DistanceSensor {
+      translation 0.06999999999999999 0.04 0.09999999999999999
+      rotation 0 1 0 -0.5672326938995748
+      name "distance_sensor1"
+      lookupTable [
+        0 0 0
+        0.2 65535 0
+      ]
+      aperture 1.57
+      resolution 1
     }
   ]
   boundingObject USE BODY
   physics Physics {
   }
   controller "U2_Exam_Victor_Xix"
-  linearVelocity -0.019014841318692147 0.005650173406525417 -0.031622353966635305
-  angularVelocity 0.018443478296455193 -0.33249875989025646 -0.06721361751185603
+}
+SoccerBall {
+  translation -0.5780825419164315 0.11205823999999993 0.4445004102638695
+  rotation -0.5388163019190297 0.46552249174604765 -0.7021152344628709 -1.5069488002103555
 }

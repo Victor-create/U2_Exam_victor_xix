@@ -26,6 +26,8 @@
 double b1=0;  //posicion inicial en 0
 double b2=0; // Posicion incial en 0
 double b3=0;
+int veces=0;
+int veces2=0;
 //double pos_final;
 //double ObsSen_Pos;
 
@@ -49,6 +51,8 @@ int main(int argc, char **argv)
    */
    WbDeviceTag wheel_1 = wb_robot_get_device("motor_1");
    WbDeviceTag wheel_2 = wb_robot_get_device("motor_2");
+         
+          
    WbDeviceTag wheel_3 = wb_robot_get_device("motor_3");
    WbDeviceTag ps_1 = wb_robot_get_device("position_1");
    WbDeviceTag ps_2 = wb_robot_get_device("position_2");
@@ -74,7 +78,10 @@ int main(int argc, char **argv)
   double pos_final1, pos_final2,pos_final3;
   double a1, a2,a3;//posiciones actuales
   double RPM_1, RPM_2, RPM_3;
+  double d1,d2;
   
+  d1=(wb_distance_sensor_get_value(ds_r1)*0.2)/65535;
+  d2=(wb_distance_sensor_get_value(ds_r2)*0.2)/65535;
   ////rueda 1//////////////
   a1 = wb_position_sensor_get_value(ps_1);
           pos_final1 = ((a1 - b1)*1)/0.064;  //0-064 es el time step en segundos
@@ -86,7 +93,6 @@ int main(int argc, char **argv)
           pos_final2 = ((a2 - b2)*1)/0.064;
           RPM_2= (pos_final2*60)/(2*PI);
           b2 = a2;
-          
   //////rueda 3////////////
   a3 = wb_position_sensor_get_value(ps_3);
           pos_final3 = ((a3 - b3)*1)/0.064;
@@ -105,7 +111,7 @@ int main(int argc, char **argv)
   linvel_rob=(linvel1+linvel2+linvel3)/3;
   
    
-  //int key=wb_keyboard_get_key();
+  //int keywb_distance_sensor_enable();
     
     //if (key==WB_KEYBOARD_UP){
     //double speed = -1;
@@ -115,7 +121,39 @@ int main(int argc, char **argv)
     wb_motor_set_velocity(wheel_2, 1);
     wb_motor_set_position(wheel_3, INFINITY);
     wb_motor_set_velocity(wheel_3, 0);
+
+    if (d1<= 0.17 && d1<d2){
+      veces++;
+    }
+    if (veces>=1 && veces<=58){
+    wb_motor_set_position(wheel_1, INFINITY);
+    wb_motor_set_velocity(wheel_1, 1);
+    wb_motor_set_position(wheel_2, INFINITY);
+    wb_motor_set_velocity(wheel_2, 1);
+    wb_motor_set_position(wheel_3, INFINITY);
+    wb_motor_set_velocity(wheel_3, 1);
+    veces++;
+    }
+    else {
+     veces=0;
+    }
     
+    if (d2<0.17 && d2<d1){
+      veces2++;
+    }
+    
+    if(veces2 >=1 && veces2<=58){
+    wb_motor_set_position(wheel_1, INFINITY);
+    wb_motor_set_velocity(wheel_1, -1);
+    wb_motor_set_position(wheel_2, INFINITY);
+    wb_motor_set_velocity(wheel_2, -1);
+    wb_motor_set_position(wheel_3, INFINITY);
+    wb_motor_set_velocity(wheel_3, -1);
+    veces2++;
+    }
+    else{
+    veces2=0;
+    }
      /*
     if(key==WB_KEYBOARD_DOWN){
     //double speed = -1;
