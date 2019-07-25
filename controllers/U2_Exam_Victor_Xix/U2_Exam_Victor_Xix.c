@@ -128,11 +128,11 @@ int main(int argc, char **argv)
     }
     if (times>=1 && times<=58){
     wb_motor_set_position(wheel_1, INFINITY);
-    wb_motor_set_velocity(wheel_1, 1);
+    wb_motor_set_velocity(wheel_1, -1);
     wb_motor_set_position(wheel_2, INFINITY);
-    wb_motor_set_velocity(wheel_2, 1);
+    wb_motor_set_velocity(wheel_2, -1);
     wb_motor_set_position(wheel_3, INFINITY);
-    wb_motor_set_velocity(wheel_3, 1);
+    wb_motor_set_velocity(wheel_3, -1);
     times++;
     }
     else {
@@ -145,11 +145,11 @@ int main(int argc, char **argv)
     
     if(times2 >=1 && times2<=58){
     wb_motor_set_position(wheel_1, INFINITY);
-    wb_motor_set_velocity(wheel_1, -1);
+    wb_motor_set_velocity(wheel_1, 1);
     wb_motor_set_position(wheel_2, INFINITY);
-    wb_motor_set_velocity(wheel_2, -1);
+    wb_motor_set_velocity(wheel_2, 1);
     wb_motor_set_position(wheel_3, INFINITY);
-    wb_motor_set_velocity(wheel_3, -1);
+    wb_motor_set_velocity(wheel_3, 1);
     times2++;
     }
     else{

@@ -1,0 +1,23 @@
+Motors:
+ In the datasheet you have a some opcions,I decided to use the one with 12v and 5.6A it has a gear 34:1 with 290 RPM and a torque  120 oz-in
+
+ For the max velocity you have to convert from RPM to rad/s the formula is rad/s=/2*PI*290 RPM)/60=30.3687rad/s. that is the value that you need to put in the max velocity of your robot
+
+Torque:
+ The datasheet give you the number in oz-in so you need to conver that number in newto meters because is the measure that webots I use my own  conversor and I put the equivalences.
+ 1- oz-in is equal to 0.007062 Nm so I multiply 0.007062Nm* 120 oz-in and the result is 0.847386 Nm
+and that is the value that you have to put in your robot 
+
+Encoder:
+ the datasheet give you the number of counts per revolution so you will have to use the formula (2*PI)/1632.67=0.00384841
+
+Distance sensor:
+ The  sensor has a resolution of 16 bits and a range from 0 to 200 mm
+
+ first: You need to convert both value for the resolution the formula is 2square 16-1 (16 it is the number of bits) and the result is 65 535   then you have to change the 200 mm to meters so the resul is 0.2M
+
+ second: you have to put the value in the look at table, the first line alway be 0 0 0  in the second line the first value will be your range in meters (0.2M) and your second value will be you resolution (65 535) and the las one it will be 0
+
+
+
+
